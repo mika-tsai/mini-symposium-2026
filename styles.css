@@ -158,15 +158,23 @@ p {
 
 h1 {
   margin: 0 0 18px;
-  max-width: min(720px, 100%);
+  max-width: min(620px, 100%);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3rem, 5.9vw, 6rem);
+  font-size: clamp(3rem, 4.65vw, 5rem);
   font-weight: 400;
   line-height: 0.96;
   letter-spacing: 0;
   overflow-wrap: normal;
   word-break: normal;
   hyphens: none;
+}
+
+h1 span {
+  display: block;
+}
+
+.hero-title-long {
+  font-size: 1em;
 }
 
 .hero-kicker {
@@ -1038,6 +1046,10 @@ textarea:focus {
     max-width: 100%;
     font-size: clamp(2.75rem, 13vw, 4.6rem);
     line-height: 0.98;
+  }
+
+  .hero-title-long {
+    font-size: 1em;
   }
 
   .hero-kicker {
