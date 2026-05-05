@@ -7,7 +7,7 @@ form.addEventListener("submit", (event) => {
   note.textContent = "Submitting registration...";
 
   window.setTimeout(() => {
-    note.textContent = `${name} has been submitted. The organizing lab will verify the payment using the account last five digits.`;
+    note.textContent = `${name} has been submitted. Please email the transfer amount and the last five digits of your payment account to xxxxx after payment.`;
     form.reset();
   }, 900);
 });

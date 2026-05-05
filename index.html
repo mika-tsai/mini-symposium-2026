@@ -6,7 +6,7 @@
     <title>Epigenetic Regulation and Neurodevelopment: A Joint Mini-Symposium and Training Workshop</title>
     <meta name="description" content="Event information, program schedule, presentation guidelines, and registration for Epigenetic Regulation and Neurodevelopment: A Joint Mini-Symposium and Training Workshop.">
     <link rel="preload" href="assets/event-hero.png" as="image">
-    <link rel="stylesheet" href="styles.css?v=20260505-register-polish">
+    <link rel="stylesheet" href="styles.css?v=20260505-payment-emphasis">
   </head>
   <body>
     <header class="site-header">
@@ -383,7 +383,7 @@
           <span class="section-number">05</span>
           <p class="eyebrow">Register</p>
           <h2>Internal Registration</h2>
-          <p>Complete the form after payment so the organizing lab can confirm your registration and match your transfer record using the last five digits of your payment account.</p>
+          <p>Complete the form after reviewing the transfer information. The organizing team will confirm your registration by email.</p>
           <div class="registration-notes" aria-label="Registration notes">
             <div>
               <span>01</span>
@@ -391,11 +391,11 @@
             </div>
             <div>
               <span>02</span>
-              <p>Use the same email for payment verification and event updates.</p>
+              <p>After completing the bank transfer, please email the <strong>transfer amount</strong> and the <strong>last five digits of your payment account</strong> to the society email: <strong>xxxxx</strong>.</p>
             </div>
             <div>
               <span>03</span>
-              <p>Dietary notes can be added in the comments field.</p>
+              <p>Dietary restrictions and accommodation requests can be updated before the registration deadline.</p>
             </div>
           </div>
         </div>
@@ -406,12 +406,34 @@
           <input type="hidden" name="pageHistory" value="0">
           <input type="hidden" name="fbzx" value="4221583001891860604">
           <input type="hidden" name="submissionTimestamp" value="-1">
+          <div class="bank-info full" aria-label="Bank transfer information">
+            <p class="eyebrow">Bank Transfer</p>
+            <dl>
+              <div>
+                <dt>Bank</dt>
+                <dd>台灣土地銀行 / 005-9X7Q</dd>
+              </div>
+              <div>
+                <dt>Account Name</dt>
+                <dd>戶名：XJ 研討會學會</dd>
+              </div>
+              <div>
+                <dt>Account Number</dt>
+                <dd>帳號：005-938-7Q2X-19Z</dd>
+              </div>
+            </dl>
+            <p>After completing the bank transfer, please email the <strong>transfer amount</strong> and the <strong>last five digits of your payment account</strong> to the society email: <strong>xxxxx</strong>.</p>
+          </div>
           <label>
-            <span>Name</span>
+            <span>Chinese Name</span>
+            <input type="text" name="entry.1251191682" autocomplete="name" required>
+          </label>
+          <label>
+            <span>English Name</span>
             <input type="text" name="entry.1169693684" autocomplete="name" required>
           </label>
           <label>
-            <span>Email</span>
+            <span>Contact Email</span>
             <input type="email" name="entry.37686190" autocomplete="email" required>
           </label>
           <label>
@@ -422,16 +444,25 @@
               <option>Postdoc</option>
               <option>PhD student</option>
               <option>RA</option>
-              <option value="__other_option__">Others</option>
+              <option>Others</option>
             </select>
-            <input type="hidden" name="entry.144247156.other_option_response" value="Others">
           </label>
           <label>
-            <span>Meal Preference</span>
+            <span>Dietary Restrictions</span>
             <select name="entry.1494221486" required>
               <option value="">Select one</option>
-              <option>Regular</option>
+              <option>No dietary restrictions</option>
               <option>Vegetarian</option>
+              <option>Other dietary restrictions</option>
+            </select>
+          </label>
+          <label>
+            <span>Accommodation Needs</span>
+            <select name="entry.1091196824" required>
+              <option value="">Select one</option>
+              <option>No accommodation needed</option>
+              <option>Single room</option>
+              <option>Twin room</option>
             </select>
           </label>
           <label class="full">
@@ -440,11 +471,7 @@
           </label>
           <label class="full">
             <span>Comments</span>
-            <textarea name="entry.1675789440" rows="4" placeholder="Dietary notes, accessibility needs, or other comments"></textarea>
-          </label>
-          <label class="checkbox full">
-            <input type="checkbox" name="entry.1761049510" value="I confirm that I have completed the payment and agree to receive event updates and registration confirmation emails." required>
-            <span>I confirm that I have completed the payment and agree to receive event updates and registration confirmation emails.</span>
+            <textarea name="entry.1675789440" rows="4" placeholder="Additional dietary notes, accessibility needs, or other comments"></textarea>
           </label>
           <button class="button primary full" type="submit">Submit Registration</button>
           <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
