@@ -110,9 +110,9 @@ a {
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 0.86fr) minmax(340px, 0.82fr);
-  gap: clamp(44px, 6vw, 92px);
-  width: min(1220px, calc(100% - 40px));
+  grid-template-columns: minmax(0, 0.96fr) minmax(340px, 0.8fr);
+  gap: clamp(64px, 7vw, 118px);
+  width: min(1340px, calc(100% - 56px));
   min-height: 610px;
   margin: 0 auto;
   padding: 78px 0 54px;
@@ -134,6 +134,8 @@ a {
 }
 
 .hero-media {
+  justify-self: end;
+  width: min(100%, 760px);
   height: min(560px, 68vh);
   border: 1px solid var(--line);
   background: var(--gold);
@@ -158,7 +160,7 @@ p {
 
 h1 {
   margin: 0 0 18px;
-  max-width: min(620px, 100%);
+  max-width: min(760px, 100%);
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(3rem, 4.65vw, 5rem);
   font-weight: 400;
@@ -228,7 +230,7 @@ h1 span {
 
 .event-details {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1px;
   width: min(1120px, calc(100% - 40px));
   margin: 14px auto 0;
@@ -835,11 +837,12 @@ h1 span {
 
 .register-band {
   display: grid;
-  grid-template-columns: minmax(280px, 0.8fr) minmax(320px, 1.2fr);
-  gap: 44px;
-  padding: 78px max(20px, calc((100vw - 1120px) / 2));
+  grid-template-columns: minmax(280px, 0.78fr) minmax(360px, 1.22fr);
+  gap: clamp(34px, 5vw, 70px);
+  padding: 88px max(20px, calc((100vw - 1120px) / 2));
   background:
-    linear-gradient(90deg, rgba(0, 49, 82, 0.1), rgba(144, 184, 192, 0.28)),
+    radial-gradient(circle at 15% 10%, rgba(144, 184, 192, 0.34), transparent 28%),
+    linear-gradient(120deg, rgba(0, 49, 82, 0.08), rgba(144, 184, 192, 0.24)),
     #e8f3f7;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -847,16 +850,50 @@ h1 span {
 
 .register-copy {
   align-self: start;
+  position: sticky;
+  top: 104px;
+}
+
+.registration-notes {
+  display: grid;
+  gap: 1px;
+  margin-top: 30px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.registration-notes div {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 16px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.registration-notes span {
+  color: var(--coral);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  font-weight: 850;
+}
+
+.registration-notes p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.55;
 }
 
 .registration-form {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  padding: 26px;
+  gap: 18px;
+  padding: clamp(24px, 4vw, 38px);
   border: 1px solid var(--line);
-  background: var(--white);
-  box-shadow: var(--soft-shadow);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.78)),
+    var(--white);
+  box-shadow: 0 24px 70px rgba(0, 49, 82, 0.12);
 }
 
 .hidden-frame {
@@ -871,11 +908,18 @@ h1 span {
 label {
   display: grid;
   gap: 8px;
+  align-content: start;
   color: var(--deep-teal);
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+label > span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 18px;
 }
 
 input,
@@ -884,10 +928,11 @@ textarea {
   width: 100%;
   border: 1px solid #b7ceda;
   border-radius: 0;
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.92);
   color: var(--ink);
   font: inherit;
   font-weight: 550;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
 }
 
 input,
@@ -907,6 +952,8 @@ select:focus,
 textarea:focus {
   outline: 3px solid rgba(0, 49, 82, 0.14);
   border-color: var(--teal);
+  background: var(--white);
+  box-shadow: inset 0 0 0 1px rgba(0, 49, 82, 0.08);
 }
 
 .full {
@@ -916,9 +963,14 @@ textarea:focus {
 .checkbox {
   display: flex;
   align-items: start;
-  gap: 10px;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid rgba(0, 49, 82, 0.14);
+  background: rgba(232, 243, 247, 0.7);
   color: var(--muted);
   font-weight: 650;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .checkbox input {
@@ -931,6 +983,8 @@ textarea:focus {
 
 .registration-form button {
   border: 0;
+  min-height: 54px;
+  justify-content: center;
 }
 
 .form-note {
@@ -1064,6 +1118,10 @@ textarea:focus {
   .register-band,
   .registration-form {
     grid-template-columns: 1fr;
+  }
+
+  .register-copy {
+    position: static;
   }
 
   .section {
