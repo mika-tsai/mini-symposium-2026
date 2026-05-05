@@ -387,17 +387,18 @@ h1 span {
   grid-template-columns: repeat(3, 118px minmax(0, 1fr));
   grid-template-rows:
     auto
-    minmax(108px, auto)
-    minmax(118px, auto)
-    minmax(64px, auto)
-    minmax(64px, auto)
-    minmax(150px, auto)
-    minmax(84px, auto)
-    minmax(142px, auto)
-    minmax(64px, auto)
     minmax(78px, auto)
-    minmax(78px, auto)
-    minmax(112px, auto);
+    minmax(40px, auto)
+    minmax(28px, auto)
+    minmax(124px, auto)
+    minmax(112px, auto)
+    minmax(96px, auto)
+    minmax(40px, auto)
+    minmax(40px, auto)
+    minmax(28px, auto)
+    minmax(58px, auto)
+    minmax(90px, auto)
+    minmax(34px, auto);
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.78);
   box-shadow: var(--shadow);
@@ -430,10 +431,10 @@ h1 span {
   grid-column: 5 / 7;
 }
 
-.agenda-item {
+.agenda-item,
+.agenda-blank {
   display: grid;
   grid-template-columns: 112px 1fr;
-  min-height: 0;
   border-bottom: 1px solid var(--line);
   border-left: 1px solid var(--line);
 }
@@ -451,62 +452,74 @@ h1 span {
   grid-column: 5 / 7;
 }
 
-.opening,
-.keynote-two,
+.morning-blank {
+  grid-row: 2 / 3;
+}
+
+.opening {
+  grid-row: 3 / 5;
+}
+
+.keynote-one,
+.session-three,
+.session-four {
+  grid-row: 5 / 6;
+}
+
+.keynote-two {
+  grid-row: 2 / 5;
+}
+
 .keynote-three {
   grid-row: 2 / 4;
 }
 
-.opening {
-  grid-row: 2 / 3;
-}
-
-.keynote-one {
-  grid-row: 3 / 5;
-}
-
-.coffee-morning {
+.coffee-three {
   grid-row: 4 / 5;
 }
 
-.d1.coffee-morning {
-  grid-row: 5 / 6;
-}
-
-.session-one {
+.lunch {
   grid-row: 6 / 7;
 }
 
-.session-two,
-.session-four {
-  grid-row: 5 / 7;
-}
-
-.lunch {
-  grid-row: 7 / 8;
-}
-
-.young-talks,
-.session-three {
-  grid-row: 8 / 9;
-}
-
-.d1.coffee-afternoon,
-.d2.coffee-afternoon {
-  grid-row: 9 / 10;
-}
-
-.discussion,
-.workshop {
-  grid-row: 10 / 13;
+.session-one {
+  grid-row: 7 / 9;
 }
 
 .career {
-  grid-row: 8 / 11;
+  grid-row: 7 / 11;
+}
+
+.discussion {
+  grid-row: 7 / 8;
+}
+
+.coffee-two {
+  grid-row: 8 / 9;
+}
+
+.coffee-one {
+  grid-row: 9 / 10;
+}
+
+.session-two {
+  grid-row: 10 / 13;
+}
+
+.workshop {
+  grid-row: 9 / 14;
 }
 
 .closing {
-  grid-row: 11 / 13;
+  grid-row: 11 / 12;
+}
+
+.day-one-end-blank {
+  grid-row: 13 / 14;
+}
+
+.day-three-end-blank {
+  grid-row: 12 / 14;
 }
 
 .agenda-item time {
@@ -527,7 +540,7 @@ h1 span {
   justify-content: center;
   padding: 16px 18px;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
 }
 
 .agenda-item h4 {
@@ -550,16 +563,18 @@ h1 span {
   text-align: left;
 }
 
-.coffee-morning h4,
-.coffee-afternoon h4,
+.coffee-one h4,
+.coffee-two h4,
+.coffee-three h4,
 .lunch h4 {
   margin: 0;
   color: var(--deep-teal);
   text-align: center;
 }
 
-.coffee-morning > div,
-.coffee-afternoon > div,
+.coffee-one > div,
+.coffee-two > div,
+.coffee-three > div,
 .lunch > div {
   display: flex;
   align-items: center;
