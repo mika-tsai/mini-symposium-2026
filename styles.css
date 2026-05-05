@@ -398,7 +398,8 @@ h1 span {
     minmax(28px, auto)
     minmax(58px, auto)
     minmax(90px, auto)
-    minmax(34px, auto);
+    minmax(34px, auto)
+    minmax(1px, auto);
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.78);
   box-shadow: var(--shadow);
@@ -452,7 +453,7 @@ h1 span {
   grid-column: 5 / 7;
 }
 
-.morning-blank {
+.morning-transfer {
   grid-row: 2 / 3;
 }
 
@@ -515,11 +516,11 @@ h1 span {
 }
 
 .day-one-end-blank {
-  grid-row: 13 / 14;
+  grid-row: 13 / -1;
 }
 
 .day-three-end-blank {
-  grid-row: 12 / 14;
+  grid-row: 12 / -1;
 }
 
 .agenda-item time {
