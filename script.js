@@ -2,8 +2,6 @@ const form = document.querySelector("#registrationForm");
 const note = document.querySelector("#formNote");
 const membershipSelect = document.querySelector("#membershipSelect");
 const accommodationSelect = document.querySelector("#accommodationSelect");
-const registrationFee = document.querySelector("#registrationFee");
-const accommodationFee = document.querySelector("#accommodationFee");
 const totalPayment = document.querySelector("#totalPayment");
 const totalPaymentInput = document.querySelector("#totalPaymentInput");
 
@@ -15,17 +13,7 @@ const updatePaymentSummary = () => {
   const registrationAmount = Number(selectedMembership?.dataset.fee || 0);
   const accommodationAmount = Number(selectedOption?.dataset.amount || 0);
   const totalAmount = registrationAmount + accommodationAmount;
-  const formattedRegistration = formatCurrency(registrationAmount);
-  const formattedAccommodation = formatCurrency(accommodationAmount);
   const formattedTotal = formatCurrency(totalAmount);
-
-  if (registrationFee) {
-    registrationFee.textContent = formattedRegistration;
-  }
-
-  if (accommodationFee) {
-    accommodationFee.textContent = formattedAccommodation;
-  }
 
   if (totalPayment) {
     totalPayment.textContent = formattedTotal;

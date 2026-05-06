@@ -1012,7 +1012,6 @@ h1 span {
 
 .payment-summary dl {
   display: grid;
-  gap: 10px;
   margin: 0;
 }
 
@@ -1042,9 +1041,8 @@ h1 span {
 }
 
 .payment-total {
-  margin-top: 4px;
-  padding-top: 12px;
-  border-top: 2px solid rgba(133, 18, 13, 0.25);
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 .payment-total dt,
