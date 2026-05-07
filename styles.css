@@ -1356,5 +1356,145 @@ textarea:focus {
     justify-content: flex-start;
   }
 }
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: 400;
+
+@media (max-width: 768px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    min-width: 0;
+  }
+
+  img,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .site-header {
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .brand,
+  .brand-logos,
+  .main-nav {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 14px;
+    row-gap: 10px;
+  }
+
+  .main-nav a {
+    white-space: normal;
+  }
+
+  .hero,
+  .event-details,
+  .section,
+  .register-band {
+    width: min(100% - 28px, 100%);
+    max-width: calc(100% - 28px);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hero {
+    overflow: hidden;
+    gap: 28px;
+  }
+
+  .hero-content,
+  .event-details,
+  .section-heading,
+  .about-grid,
+  .brief-grid,
+  .speaker-grid,
+  .register-copy,
+  .registration-form,
+  .form-section,
+  .form-section-grid,
+  .site-footer,
+  .site-footer address {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero-content,
+  .event-details,
+  .section,
+  .register-copy {
+    text-align: left;
+  }
+
+  .event-summary {
+    text-align: center;
+  }
+
+  .event-details div,
+  .info-panel,
+  .brief-card,
+  .pi-note,
+  .speaker-card,
+  .registration-form,
+  .form-section,
+  .bank-info,
+  .payment-summary {
+    min-width: 0;
+  }
+
+  .event-details div,
+  .registration-form,
+  .form-section,
+  .bank-info,
+  .payment-summary {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .section,
+  .register-band {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .form-section-grid {
+    grid-template-columns: 1fr;
+  }
+
+  input,
+  select,
+  textarea {
+    max-width: 100%;
+  }
+
+  .schedule-table,
+  .schedule-days {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .schedule-days {
+    min-width: 0;
+    grid-template-columns: repeat(3, 104px minmax(260px, 1fr));
+  }
+
+  .table-row {
+    min-width: 760px;
+  }
+}
